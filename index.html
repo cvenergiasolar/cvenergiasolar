@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" type="image/png" href="images/cv-energia-solar-logo.png">
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV ENERGIA SOLAR - Economia e Sustentabilidade para Você</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    
+    <!-- Social Media Icons (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* --- CSS DO SITE CV ENERGIA SOLAR --- */
+        /* Cores Definidas */
+        :root {
+            --cor-fundo-principal: #202020; /* Preto puxado para o cinza bem escuro */
+            --cor-fundo-secao: #282828; /* Um cinza um pouco mais claro para seções */
+            --cor-destaque-amarelo: #FFD700; /* Amarelo chamativo (Goldenrod) */
+            --cor-texto-claro: #F0F0F0; /* Branco/Cinza Claro para textos */
+            --cor-texto-secundario: #BBBBBB; /* Cinza médio para textos informativos */
+            --cor-borda: #444444; /* Borda sutil para elementos */
+        }
+
+        /* Reset Básico e Estilos Gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo-principal);
+            color: var(--cor-texto-claro);
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Rolagem suave para âncoras */
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Cabeçalho (Header) --- */
+        header {
+            background-color: var(--cor-fundo-secao);
+            padding: 15px 0;
+            border-bottom: 3px solid var(--cor-destaque-amarelo);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+        }
+
+        header .logo {
+            padding-left: 20px;
+        }
+
+        header .logo img {
+            max-width: 180px; /* Ajuste o tamanho da sua logo aqui */
+            height: auto;
+            display: block; /* Remove espaço extra abaixo da imagem */
+        }
+        header .logo a { /* Garante que a área clicável da logo não tenha sublinhado */
+            text-decoration: none;
+        }
+
+        .main-nav {
+            margin-right: 20px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+            justify-content: center; /* Centraliza a navegação em telas menores */
+        }
+
+        .main-nav ul li {
+            margin: 0 15px;
+        }
+
+        .main-nav ul li a {
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav ul li a:hover {
+            color: var(--cor-destaque-amarelo);
+            border-bottom: 2px solid var(--cor-destaque-amarelo);
+        }
+
+        .contact-icons {
+            margin-right: 20px;
+        }
+
+        .contact-icons a {
+            color: var(--cor-destaque-amarelo);
+            font-size: 24px;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .contact-icons a:hover {
+            color: #FFFF66; /* Um amarelo um pouco mais claro no hover */
+        }
+
+        /* --- Novo Estilo para o Banner Principal --- */
+        .main-banner {
+            position: relative;
+            width: 100%;
+            height: 450px; /* Altura fixa para o banner */
+            /*
+                ATENÇÃO: SUBSTITUA O CÓDIGO ABAIXO COM O CAMINHO DA SUA IMAGEM.
+                Por exemplo, se a sua imagem se chama 'minha-imagem.jpg' e está na pasta 'images',
+                o código correto seria: url('images/minha-imagem.jpg');
+            */
+            background-image: url(images/banner-energia-solar.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--cor-texto-claro);
+            overflow: hidden; /* Garante que o conteúdo não vaze */
+        }
+
+        .main-banner::before { /* Overlay escuro para melhorar a legibilidade do texto */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 50% de opacidade preta */
+            z-index: 1;
+        }
+
+        .main-banner .banner-content {
+            position: relative;
+            z-index: 2; /* Acima do overlay */
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .main-banner h2 {
+            font-size: 3.5em;
+            color: var(--cor-destaque-amarelo);
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .main-banner p {
+            font-size: 1.5em;
+            color: var(--cor-texto-claro);
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .main-banner .cta-button {
+            background-color: var(--cor-destaque-amarelo);
+            color: var(--cor-fundo-principal);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none; /* Remove sublinhado do link */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            display: inline-block; /* Permite padding e margin */
+        }
+
+        .main-banner .cta-button:hover {
+            background-color: #FFEB3B;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- Seção Hero / Simulador --- */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: var(--cor-fundo-principal);
+        }
+
+        .hero-section h1 {
+            font-size: 3.2em;
+            color: var(--cor-destaque-amarelo);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero-section p {
+            font-size: 1.4em;
+            color: var(--cor-texto-claro);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .simulator-box {
+            background-color: var(--cor-fundo-secao);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: left;
+            border: 1px solid var(--cor-borda);
+        }
+
+        .simulator-box label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: var(--cor-texto-claro);
+            font-size: 1.1em;
+        }
+
+        .simulator-box input[type="number"],
+        .simulator-box input[type="text"] {
+            width: calc(100% - 24px); /* Subtrai padding e borda */
+            padding: 14px 12px;
+            margin-bottom: 25px;
+            border: 1px solid var(--cor-borda);
+            border-radius: 6px;
+            background-color: #383838;
+            color: var(--cor-texto-claro);
+            font-size: 1.1em;
+            box-sizing: border-box; /* Inclui padding e borda na largura */
+        }
+
+        .simulator-box input::placeholder {
+            color: var(--cor-texto-secundario);
+        }
+
+        .simulator-message {
+            color: #FF6347; /* Tomato red for error messages */
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+            display: none; /* Hidden by default */
+        }
+
+        .simulator-box button {
+            background-color: var(--cor-destaque-amarelo);
+            color: var(--cor-fundo-principal); /* Texto escuro sobre o amarelo */
+            padding: 16px 35px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .simulator-box button:hover {
+            background-color: #FFEB3B; /* Um amarelo um pouco mais claro no hover */
+            transform: translateY(-2px);
+        }
+
+        .result-section {
+            margin-top: 35px;
+            padding: 25px;
+            background-color: #3a3a3a;
+            border-radius: 8px;
+            display: none; /* Escondido por padrão, JavaScript o mostrará */
+            color: var(--cor-texto-claro);
+            font-size: 1.1em;
+            border: 1px solid var(--cor-borda);
+        }
+
+        .result-section h3 {
+            color: var(--cor-destaque-amarelo);
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            text-align: center;
+        }
+
+        .result-section p {
+            margin-bottom: 12px;
+            font-size: 1.0em;
+        }
+
+        .result-section strong {
+            color: var(--cor-destaque-amarelo);
+        }
+
+        /* Adicionado para o novo botão de contato */
+        .whatsapp-button-link {
+            display: block;
+            background-color: #25D366;
+            color: white;
+            padding: 16px 35px;
+            border-radius: 6px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .whatsapp-button-link:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        /* --- Seções de Conteúdo Genéricas --- */
+        .content-section {
+            padding: 60px 20px;
+            background-color: var(--cor-fundo-secao);
+            margin-bottom: 40px; /* Espaçamento entre as seções */
+            border-bottom: 1px solid var(--cor-borda);
+        }
+
+        .content-section:nth-of-type(odd) { /* Fundo alternado para algumas seções */
+            background-color: var(--cor-fundo-principal);
+        }
+
+        .content-section h2 {
+            font-size: 2.5em;
+            color: var(--cor-destaque-amarelo);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .content-section h3 {
+            font-size: 1.8em;
+            color: var(--cor-destaque-amarelo);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content-section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .content-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .grid-item {
+            background-color: var(--cor-fundo-principal);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            flex: 1 1 calc(33% - 40px); /* 3 itens por linha */
+            min-width: 280px; /* Mínimo para não ficar muito estreito */
+            text-align: center;
+            border: 1px solid var(--cor-borda);
+        }
+
+        .grid-item h3 {
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--cor-destaque-amarelo);
+        }
+
+        .grid-item p {
+            font-size: 1em;
+            color: var(--cor-texto-secundario);
+        }
+
+        /* Seção FAQ */
+        .faq-item {
+            background-color: var(--cor-fundo-secao);
+            border: 1px solid var(--cor-borda);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden; /* Garante que o conteúdo não vaze */
+        }
+
+        .faq-question {
+            padding: 18px 25px;
+            background-color: #383838;
+            color: var(--cor-destaque-amarelo);
+            font-weight: bold;
+            font-size: 1.2em;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background-color: #404040;
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0; /* Começa escondido */
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transição para abrir/fechar */
+            color: var(--cor-texto-claro);
+            background-color: var(--cor-fundo-secao);
+        }
+
+        .faq-answer p {
+            padding-bottom: 18px; /* Padding quando aberto */
+            padding-top: 0;
+            margin: 0;
+        }
+
+        .faq-question .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .faq-question.active + .faq-answer {
+            max-height: 200px; /* Ajuste conforme necessário para o conteúdo */
+            /* Isso é uma estimativa, para um conteúdo dinâmico é melhor usar JS para calcular a altura real */
+            padding-top: 18px;
+        }
+
+
+        /* Formulário de Contato (Exemplo Simples) */
+        .contact-form-box {
+            background-color: var(--cor-fundo-secao);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+            border: 1px solid var(--cor-borda);
+        }
+
+        .contact-form-box label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--cor-texto-claro);
+        }
+
+        .contact-form-box input[type="text"],
+        .contact-form-box input[type="email"],
+        .contact-form-box input[type="tel"],
+        .contact-form-box textarea {
+            width: calc(100% - 24px);
+            padding: 12px 10px;
+            margin-bottom: 20px;
+            border: 1px solid var(--cor-borda);
+            border-radius: 5px;
+            background-color: #383838;
+            color: var(--cor-texto-claro);
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .contact-form-box textarea {
+            resize: vertical; /* Permite redimensionar verticalmente */
+            min-height: 100px;
+        }
+
+        /* --- Estilo para o botão do WhatsApp e Instagram --- */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaço entre os botões */
+            align-items: center;
+        }
+
+        .social-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            color: #ffffff;
+        }
+
+        .social-link .fab, .social-link .fas {
+            font-size: 1.4em;
+            margin-right: 15px;
+        }
+
+        .whatsapp-button {
+            background-color: #25D366; /* Cor verde do WhatsApp */
+        }
+        
+        .instagram-button {
+            background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .instagram-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+
+        /* --- Rodapé (Footer) --- */
+        footer {
+            background-color: var(--cor-fundo-secao);
+            color: var(--cor-texto-secundario);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            border-top: 3px solid var(--cor-destaque-amarelo);
+            font-size: 0.95em;
+        }
+
+        footer .contact-info {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        footer .contact-info p {
+                margin: 5px 0;
+        }
+
+        footer .contact-info a {
+            color: var(--cor-destaque-amarelo);
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.3s ease;
+        }
+
+        footer .contact-info a:hover {
+            color: #FFFF66;
+        }
+
+        /* --- Responsividade Básica (Media Queries) --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 0 10px 0;
+            }
+            .logo {
+                padding-left: 0; /* Remove padding lateral no mobile */
+                margin-bottom: 10px;
+                text-align: center; /* Centraliza a logo no mobile */
+            }
+            .main-nav {
+                margin: 10px 0;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-nav ul li {
+                margin: 5px 0;
+            }
+            .contact-icons {
+                margin-right: 0;
+                margin-top: 10px;
+            }
+            .contact-icons a {
+                margin: 0 10px;
+            }
+            .main-banner {
+                height: 300px; /* Altura menor para o banner em telas menores */
+            }
+            .main-banner h2 {
+                font-size: 2.5em;
+            }
+            .main-banner p {
+                font-size: 1.2em;
+            }
+            .main-banner .cta-button {
+                padding: 14px 30px;
+                font-size: 1.2em;
+            }
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+            .hero-section p {
+                font-size: 1.1em;
+            }
+            .simulator-box, .contact-form-box {
+                padding: 30px 20px;
+            }
+            .content-section h2 {
+                font-size: 2em;
+            }
+            .grid-item {
+                flex: 1 1 100%; /* Uma coluna em telas menores */
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- SUA LOGO VAI AQUI! -->
+            <!-- 1. Certifique-se de que o arquivo de sua logo (ex: cv-energia-solar-logo.png) está na pasta 'images/' (ou 'img/') no mesmo diretório do 'index.html'. 2. Ajuste o 'src' para o caminho correto do seu arquivo. 3. O 'alt' deve ser um texto descritivo. 4. O 'max-width' no CSS na seção <style> está controlando o tamanho da logo. Você pode ajustar o valor '180px' lá para redimensioná-la. -->
+            <a href="#simulador">
+                <!-- Link da logo para a seção do simulador (ou #home para o topo) -->
+                <img src="images/cv-energia-solar-logo.png" alt="CV Energia Solar Logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="contact-icons">
+            <!-- Ícone do WhatsApp -->
+            <a href="https://wa.me/5511953304603" target="_blank" title="WhatsApp CV Energia Solar">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <!-- Ícone do Instagram -->
+            <a href="https://www.instagram.com/cvenergiasolar/" target="_blank" title="Instagram CV Energia Solar">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Ícone do Email -->
+            <a href="mailto:energiasolarcv@gmail.com" title="Email CV Energia Solar">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Novo Banner Principal com Botão "Saiba Mais" -->
+        <section class="main-banner">
+            <div class="banner-content">
+                <h2>A Energia do Futuro ao Seu Alcance!</h2>
+                <p>Descubra como a energia solar pode transformar sua vida e o planeta.</p>
+                <a href="#simulador" class="cta-button">Saiba Mais</a>
+            </div>
+        </section>
+
+        <!-- Seção Hero e Simulador -->
+        <section id="simulador" class="hero-section">
+            <div class="container">
+                <h1>Transforme Sua Conta de Luz em Energia Limpa!</h1>
+                <p>Simule agora sua economia e descubra o potencial da energia solar para sua casa ou empresa.</p>
+                <div class="simulator-box">
+                    <label for="contaLuz">1. Qual o valor médio da sua conta de luz (últimos 12 meses)?</label>
+                    <input type="number" id="contaLuz" placeholder="Ex: 500.00" min="0" step="any">
+
+                    <label for="cep">2. Informe o CEP da sua instalação:</label>
+                    <input type="text" id="cep" placeholder="Ex: 01000-000" maxlength="9">
+                    <span class="info-text">Sua informação de CEP será usada apenas para simular a irradiação solar na sua região e não será armazenada.</span>
+                    
+                    <div class="simulator-message" id="errorMessage"></div>
+                    
+                    <button onclick="simulate()">Simular Economia</button>
+
+                    <div id="simulationResult" class="result-section">
+                        <h3>Resultados da Simulação</h3>
+                        <p>Consumo Mensal Estimado: <strong id="consumoMensal">0 kWh</strong></p>
+                        <p>Potência do Sistema Necessária: <strong id="potenciaSistema">0.0 kWp</strong></p>
+                        <p>Investimento Estimado: <strong id="investimentoEstimado">R$ 0,00</strong></p>
+                        <p>Economia Mensal Estimada: <strong id="economiaMensal">R$ 0,00</strong>.</p>
+                        <p>Tempo de Retorno do Investimento: <strong id="tempoRetorno">0.0</strong> anos.</p>
+                        <div class="contact-buttons-container">
+                            <a href="https://wa.me/5511953304603?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20o%20sistema%20de%20energia%20solar%20que%20simulei%20no%20site." target="_blank" class="whatsapp-button-link" title="Fale conosco via WhatsApp">
+                                <i class="fab fa-whatsapp"></i> Falar com um consultor
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  /* Fundo da seção em cinza escuro */
+  .secao-trabalhos { 
+    padding: 60px 20px; 
+    background-color: #2c2c2c; /* Cinza escuro grafite */
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* Estilo do Título com a fonte Montserrat */
+  .titulo-esteira { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    color: #ffffff; /* Letra branca para dar contraste */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .swiper { width: 100%; padding-bottom: 50px; }
+
+  /* Card da foto */
+  .swiper-slide { 
+    display: flex; flex-direction: column; align-items: center; 
+    background: #3d3d3d; /* Cinza um pouco mais claro que o fundo para destacar o card */
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+    border-bottom: 6px solid #f1c40f; /* Detalhe amarelo solar */
+  }
+
+  .swiper-slide img { 
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    filter: brightness(0.9); /* Escurece a foto levemente para combinar com o tema */
+    transition: 0.3s;
+  }
+
+  .swiper-slide img:hover {
+    filter: brightness(1.1); /* Brilha ao passar o mouse */
+  }
+
+  .legenda { 
+    padding: 15px; 
+    font-weight: 600; 
+    color: #ffffff; /* Texto da legenda em branco */
+    text-align: center; 
+  }
+
+  /* Ajuste das cores dos controles (setas e bolinhas) */
+  .swiper-button-next, .swiper-button-prev { color: #f1c40f !important; }
+  .swiper-pagination-bullet { background: #555 !important; }
+  .swiper-pagination-bullet-active { background: #f1c40f !important; }
+</style>
+
+<section class="secao-trabalhos">
+  <h2 class="titulo-esteira">Nossos Trabalhos</h2>
+  
+  <div class="swiper esteiraTrabalhos">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/1.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/2.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/3.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/4.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/5.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/6.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/7.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/8.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/9.jpeg"><div class="legenda"></div></div>
+      <div class="swiper-slide"><img src="images/10.jpeg"><div class="legenda"></div></div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.esteiraTrabalhos', {
+      loop: true,
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 20 },
+        768: { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 30 }
+      }
+    });
+  });
+</script>
+
+        <!-- Seção Como Funciona -->
+        <section id="como-funciona" class="content-section">
+            <div class="container">
+                <h2>Como Funciona a Energia Solar?</h2>
+                <p>A energia solar é uma fonte de energia limpa e renovável. Veja como é simples o processo de geração e uso em sua casa:</p>
+                <div class="content-grid">
+                    <div class="grid-item">
+                        <h3>1. Captação</h3>
+                        <p>Placas solares, instaladas no telhado, captam a luz do sol e a transformam em energia elétrica (corrente contínua).</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>2. Conversão</h3>
+                        <p>Um inversor converte a energia de corrente contínua para corrente alternada, a mesma usada em sua casa e na rede elétrica.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>3. Uso e Créditos</h3>
+                        <p>A energia gerada é usada instantaneamente em sua casa. Se houver excesso, ele é injetado na rede e vira créditos de energia, que podem ser usados em até 60 meses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Benefícios -->
+        <section id="beneficios" class="content-section">
+            <div class="container">
+                <h2>Os Benefícios de Ter Energia Solar</h2>
+                <p>Além da economia, a energia solar traz vantagens que vão muito além da sua conta de luz.</p>
+                <div class="content-grid">
+                    <div class="grid-item">
+                        <h3>Economia Imediata</h3>
+                        <p>Reduza sua conta de luz em até 95% e economize dinheiro desde o primeiro mês.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Sustentabilidade</h3>
+                        <p>Contribua para um futuro mais verde, utilizando uma fonte de energia limpa e inesgotável.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Valorização do Imóvel</h3>
+                        <p>Imóveis com painéis solares são mais valorizados no mercado, representando um investimento inteligente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Quem Somos -->
+        <section id="quem-somos" class="content-section">
+            <div class="container">
+                <h2>Quem Somos</h2>
+                <p>A CV Energia Solar é mais do que uma empresa, somos parceiros na sua jornada rumo à sustentabilidade e economia. Com anos de experiência no setor, nossa missão é fornecer soluções completas em energia solar, desde o projeto até a instalação e manutenção.</p>
+                <p>Nossa equipe de especialistas está pronta para tirar todas as suas dúvidas e projetar um sistema que atenda perfeitamente às suas necessidades. Acreditamos que a energia do sol deve estar acessível a todos.</p>
+            </div>
+        </section>
+
+        <!-- Seção FAQ -->
+        <section id="faq" class="content-section">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O que é um sistema de energia solar fotovoltaica?
+                            <span class="arrow">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>É um sistema que utiliza painéis solares para converter a luz do sol em energia elétrica. Essa energia pode ser usada para alimentar sua casa ou empresa, reduzindo drasticamente a dependência da rede elétrica tradicional.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Qual a vida útil de um painel solar?
+                            <span class="arrow">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Os painéis solares de alta qualidade têm uma vida útil de mais de 25 anos, com garantia de desempenho que assegura a geração de energia por muito tempo.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Posso usar energia solar à noite ou em dias nublados?
+                            <span class="arrow">&#9660;</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim. Durante o dia, o sistema gera créditos de energia que são armazenados na rede da concessionária. À noite ou em dias nublados, sua casa utiliza esses créditos para se manter abastecida, sem interrupções.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="content-section">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <p style="text-align: center;">Entre em contato direto com nossa equipe via WhatsApp ou Instagram e tire todas as suas dúvidas!</p>
+                <div class="contact-form-box">
+                    <div class="social-links">
+                        <a href="https://wa.me/5511953304603?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20energia%20solar." target="_blank" class="social-link whatsapp-button" title="Fale via WhatsApp">
+                            <i class="fab fa-whatsapp"></i> Fale via WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/cvenergiasolar/" target="_blank" class="social-link instagram-button" title="Siga-nos no Instagram">
+                            <i class="fab fa-instagram"></i> Siga-nos no Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2019 CV ENERGIA SOLAR. Todos os direitos reservados.</p>
+            <p>Desenvolvido com energia limpa e paixão.</p>
+            <div class="contact-info">
+                <p>
+                    <i class="fas fa-phone-alt"></i> (11) 95330-4603 |
+                    <i class="fas fa-envelope"></i> <a href="mailto:energiasolarcv@gmail.com">energiasolarcv@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Lógica do Simulador de Economia ---
+        function simulate() {
+            const contaLuz = parseFloat(document.getElementById('contaLuz').value);
+            const cep = document.getElementById('cep').value.replace(/\D/g, ''); // Remove não-dígitos
+            const errorMessage = document.getElementById('errorMessage');
+
+            errorMessage.style.display = 'none'; // Esconde mensagem de erro anterior
+
+            if (isNaN(contaLuz) || contaLuz <= 0) {
+                errorMessage.textContent = 'Por favor, insira um valor válido para a conta de luz.';
+                errorMessage.style.display = 'block';
+                document.getElementById('simulationResult').style.display = 'none'; // Esconde os resultados
+                return;
+            }
+
+            if (cep.length !== 8) {
+                errorMessage.textContent = 'Por favor, insira um CEP válido de 8 dígitos.';
+                errorMessage.style.display = 'block';
+                document.getElementById('simulationResult').style.display = 'none'; // Esconde os resultados
+                return;
+            }
+
+            // Variáveis de simulação (simplificadas para o exemplo)
+            const precoKwh = 0.90; // Exemplo de preço por kWh em R$
+            const custoKwp = 3000; // Exemplo de custo por kWp em R$
+            const irradicaoSolar = 4.5; // Exemplo de irradiação solar em kWh/m²/dia (ajustável por CEP real)
+            const perdasSistema = 0.8; // Exemplo de fator de perdas do sistema
+
+            // Cálculo do consumo mensal em kWh
+            const consumoMensalKwh = contaLuz / precoKwh;
+
+            // Cálculo da potência do sistema necessária em kWp
+            const potenciaSistemaKwp = consumoMensalKwh / (30 * irradicaoSolar * perdasSistema);
+
+            // Cálculo do investimento estimado
+            const investimentoEstimado = potenciaSistemaKwp * custoKwp;
+            
+            // Cálculo da economia mensal estimada (ajustado para ser um pouco mais preciso)
+            const economiaMensal = contaLuz * 0.90; 
+
+            // Cálculo do tempo de retorno do investimento
+            const tempoRetornoAnos = investimentoEstimado / (economiaMensal * 12);
+
+            // Exibir os resultados na tela
+            document.getElementById('consumoMensal').textContent = consumoMensalKwh.toFixed(0) + ' kWh';
+            document.getElementById('potenciaSistema').textContent = potenciaSistemaKwp.toFixed(1) + ' kWp';
+            document.getElementById('investimentoEstimado').textContent = investimentoEstimado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2 });
+            document.getElementById('economiaMensal').textContent = economiaMensal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2 });
+            document.getElementById('tempoRetorno').textContent = tempoRetornoAnos.toFixed(1);
+
+            document.getElementById('simulationResult').style.display = 'block'; // Mostra os resultados
+        }
+
+        // --- JavaScript para o FAQ (Abre e Fecha) ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    question.classList.toggle('active');
+                    if (question.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px'; // Ajusta a altura real do conteúdo
+                    } else {
+                        answer.style.maxHeight = '0';
+                    }
+                });
+            });
+
+            // Formatação do CEP
+            const cepInput = document.getElementById('cep');
+            cepInput.addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não for dígito
+                if (value.length > 5) {
+                    value = value.substring(0, 5) + '-' + value.substring(5, 8);
+                }
+                e.target.value = value;
+            });
+        });
+    </script>
+</body>
+</html>
